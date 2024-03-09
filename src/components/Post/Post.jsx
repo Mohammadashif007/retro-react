@@ -2,9 +2,16 @@ import { BiMessageDetail } from "react-icons/bi";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { MdAccessTime } from "react-icons/md";
 import { FaRegEnvelopeOpen } from "react-icons/fa6";
+import { useState } from "react";
 
-const Post = ({ post }) => {
-    console.log(post);
+const Post = ({ post, savePost }) => {
+    
+
+    // const savePost = (id) => {
+    //     console.log('click', id);
+    // }
+
+    // console.log(post);
     const {
         category,
         title,
@@ -15,10 +22,11 @@ const Post = ({ post }) => {
         posted_time,
         view_count,
         author,
+        id
     } = post;
     return (
         <div>
-            <div className=" bg-primary text-primary-content flex gap-5 mt-5 rounded-2xl p-5">
+            <div className=" bg-primary text-primary-content flex gap-5 rounded-2xl mb-5 p-5">
                 <div className="">
                     {
                         <img
@@ -49,7 +57,7 @@ const Post = ({ post }) => {
                                 <span>{view_count}</span>
                             </div>
                         </div>
-                        <div className="bg-[tomato] p-3 rounded-full text-[20px] cursor-pointer">
+                        <div onClick={()=> savePost({title: title, view: view_count})} className="bg-[tomato] p-3 rounded-full text-[20px] cursor-pointer">
                             <FaRegEnvelopeOpen />
                         </div>
                     </div>
