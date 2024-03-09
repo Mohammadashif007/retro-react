@@ -1,6 +1,6 @@
 export default function Banner() {
     return (
-        <div className="w-9/12 mx-auto h-[400px] bg-[#12132D] rounded-xl flex justify-center gap-16 items-center">
+        <div className=" mx-auto h-[400px] bg-[#12132D] rounded-xl flex justify-center gap-16 items-center">
             <div className="text-[#fff] flex flex-col gap-5">
                 <p className="text-5xl  font-extrabold">
                     Welcome to the <br /> ReTro Forum
