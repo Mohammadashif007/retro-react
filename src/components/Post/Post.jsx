@@ -57,7 +57,7 @@ const Post = ({ post, savePost }) => {
                                 <span>{view_count}</span>
                             </div>
                         </div>
-                        <div onClick={()=> savePost({title: title, view: view_count})} className="bg-[tomato] p-3 rounded-full text-[20px] cursor-pointer">
+                        <div onClick={()=> savePost(id)} className="bg-[tomato] p-3 rounded-full text-[20px] cursor-pointer">
                             <FaRegEnvelopeOpen />
                         </div>
                     </div>
